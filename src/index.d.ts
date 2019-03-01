@@ -94,10 +94,10 @@ export interface RatingProps {
   /**
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
-  onFinishRating?( rating: number ): void;
+  onFinishRating?(rating: number): void;
 }
 
-export class Rating extends React.Component<RatingProps> {}
+export class Rating extends React.Component<RatingProps> { }
 
 export interface AirbnbRatingProps {
 
@@ -134,7 +134,13 @@ export interface AirbnbRatingProps {
   /**
    * Callback method when the user finishes rating. Gives you the final rating value as a whole number
    */
-  onFinishRating?( value: number ): void;
+  onFinishRating?(value: number): void;
+
+  size?: number;
+
+  isDisabled?: boolean;
+
+  selectedColor?: string;
 }
 
-export class AirbnbRating extends React.Component<AirbnbRatingProps> {}
+export class AirbnbRating extends React.Component<AirbnbRatingProps> { }
